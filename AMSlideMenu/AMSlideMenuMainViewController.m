@@ -423,12 +423,12 @@ static NSMutableArray *allInstances;
                 [self performSegueWithIdentifier:@"rightMenu" sender:self];
             }
             @catch (NSException *exception) {
-                
+                NSLog(@"WARNING: You setted primaryMenu to left , but you have no segue with identifier 'rightMenu'");
             }
         }
         @catch (NSException *exception)
         {
-            [self performSegueWithIdentifier:@"rightMenu" sender:self];
+//            [self performSegueWithIdentifier:@"rightMenu" sender:self];
             NSLog(@"WARNING: You setted primaryMenu to left , but you have no segue with identifier 'leftMenu'");
         }
     }
